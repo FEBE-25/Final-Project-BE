@@ -21,11 +21,225 @@
 - login : menggunakan method POST, method ini merupakan fitur login
 
 > /pesanLes : endpoint ini memiliki beberapa method, antara lain :
+
+| Atrributes      | Tipe Data 	  | Deksripsi                    |
+| --------------- | ------------- | ---------------------------- |
+| teacherId      	| String      	| id pengajar                  |
+| userId	        | String      	| id pelajar                   |
+| biaya           | String    	  | biaya les perjam             |
+|jenjangMateri    | String    	  | tingkatan materi             |
+|topikMateri      | String    	  | topik mater                  |
+|detilTopik       | String    	  | detil topik                  |
+|tanggal          | String    	  | tanggal pemesanan            |
+|jamMulai         | String    	  | jam mulai les                |
+|durasi           | String    	  | durasi berapa lama les       |
+|modeBelajar      | String    	  | belajar online/offline       |
+|alamat           | String    	  | alamat jika les offline      |
+|maps             | String    	  | link maps                    |
+|tambahan         | String    	  | tambahan                     |
+
 - getAllPesanLes : menggunakan method GET, method ini akan mendapatkan semua data pesanan les yang telah dibuat
+
+Request :
+
+Method : GET
+
+Endpoint : pesanLes
+
+Header : authUser
+
+Response :
+
+```javascript
+  {
+  "message": "succes get data",
+  "data": [
+    {
+      "_id": "String",
+      "teacherId": {
+        "_id": "String",
+        "nama": "String"
+      },
+      "userId": {
+        "_id": "String",
+        "name": "String"
+      },
+      "biaya": "String",
+      "jenjangMateri": "String",
+      "topikMateri": "String",
+      "detilTopik": "String",
+      "tanggal": "String",
+      "jamMulai": "String",
+      "durasi": "String",
+      "modeBelajar": "String",
+      "alamat": "String",
+      "maps": "String",
+      "tambahan": "String",
+      "__v": 0
+    },  
+  ]
+}
+```
+
 - getPesanLesByID : menggunakan method GET, method ini akan mendapatkan data pesanan berdasarkan ID
+
+Request :
+
+Method : GET
+
+Endpoint : pesanLes/:id
+
+Header : authUser
+
+Response :
+
+```javascript
+  {
+  "message": "succes get data",
+  "data": [
+    {
+      "_id": "String",
+      "teacherId": {
+        "_id": "String",
+        "nama": "String"
+      },
+      "userId": {
+        "_id": "String",
+        "name": "String"
+      },
+      "biaya": "String",
+      "jenjangMateri": "String",
+      "topikMateri": "String",
+      "detilTopik": "String",
+      "tanggal": "String",
+      "jamMulai": "String",
+      "durasi": "String",
+      "modeBelajar": "String",
+      "alamat": "String",
+      "maps": "String",
+      "tambahan": "String",
+      "__v": 0
+    },  
+  ]
+}
+```
+
 - addPesanLes : menggunakan method POST, method ini akan menambah pesanan les ke database
+
+Request :
+
+Method : POST
+
+Endpoint : pesanLes
+
+Header : authUser
+
+Body :
+
+```javascript
+   {
+   "teacherId" : "String",
+  "userId" : "String",
+  "biaya" : "String",
+  "jenjangMateri" : "String",
+  "topikMateri" : "String",
+  "detilTopik" : "String",
+  "tanggal" : "String",
+  "jamMulai" : "String",
+  "durasi" : "String",
+  "modeBelajar" : "String",
+  "alamat" : "String",
+  "maps" : "String",
+  "tambahan" : "String"
+  }
+```
+
+Response :
+
+```javascript
+    {
+      "message": "pesanan dibuat!!!
+    }
+```
 - deletePesanLesByID : menggunakan method DELETE, method ini akan menghapus pesanan lesberdasarkan ID
+
+Request :
+
+Method : DELETE
+
+Endpoint : pesanLes/:id
+
+Header : authAdmin
+
+Response :
+
+```javascript
+ {
+  "message": "Pesanan telah dihapus",
+  "doc": {
+    "_id": "String",
+  "teacherId" : "String",
+  "userId" : "String",
+  "biaya" : "String",
+  "jenjangMateri" : "String",
+  "topikMateri" : "String",
+  "detilTopik" : "String",
+  "tanggal" : "String",
+  "jamMulai" : "String",
+  "durasi" : "String",
+  "modeBelajar" : "String",
+  "alamat" : "String",
+  "maps" : "String",
+  "tambahan" : "String",
+    "__v": 0
+  }
+}
+```
+
 - updatePesanLesByID : menggunakan method PUT, method ini akan mengupdate pesanan les berdasarkan ID
+
+Request :
+
+Method : PUT
+
+Endpoint : pesanLes/:id
+
+Header : authUser
+
+Body :
+
+```javascript
+   {
+   "teacherId" : "String",
+  "userId" : "String",
+  "biaya" : "String",
+  "jenjangMateri" : "String",
+  "topikMateri" : "String",
+  "detilTopik" : "String",
+  "tanggal" : "String",
+  "jamMulai" : "String",
+  "durasi" : "String",
+  "modeBelajar" : "String",
+  "alamat" : "String",
+  "maps" : "String",
+  "tambahan" : "String"
+  }
+```
+
+Response :
+
+```javascript
+    {
+  "doc": {
+    "acknowledged": true,
+    "modifiedCount": 0,
+    "upsertedId": null,
+    "upsertedCount": 0,
+    "matchedCount": 1
+  },
+  "message": "pesanan telah diedit"
+}
+```
 
 > /pengajar : endpoint ini memiliki beberapa method, antara lain :
 - getAllPengajar : menggunakan method GET, method ini akan mendapatkan data semua pengajar dalam database
@@ -45,13 +259,16 @@
 
 
 - getAllAdmin : menggunakan method GET, method ini akan mendapatkan data semua admin
+
 Request :
 
-- Method : GET
-- Endpoint : admin
-- Header : authAdmin
-  - Accept : application/json
-- Response :
+Method : GET
+
+Endpoint : admin
+
+Header : authAdmin
+
+Response :
 
 ```javascript
   {
@@ -68,13 +285,16 @@ Request :
 }
 ```
 - getAdminByID : menggunakan method GET, method ini akan mendapatkan data admin berdasarkan ID
+
 Request :
 
-- Method : GET
-- Endpoint : admin/:id
-- Header : authAdmin
-  - Accept : application/json
-- Response :
+Method : GET
+
+Endpoint : admin/:id
+
+Header : authAdmin
+
+Response :
 
 ```javascript
   {
@@ -92,13 +312,16 @@ Request :
 ```
 
 - addAdmin : menggunakan method POST, method ini akan menambahkan data admin
+
 Request :
 
-- Method : POST
-- Endpoint : admin/register
-- Header :
+Method : POST
 
-- Body :
+Endpoint : admin/register
+
+Header :
+
+Body :
 
 ```javascript
    {
@@ -108,7 +331,7 @@ Request :
     }
 ```
 
-- Response :
+Response :
 
 ```javascript
     {
@@ -119,13 +342,16 @@ Request :
 - deleteAdminByID : menggunakan method DELETE, method ini akan menghapus data admin berdasarkan ID
 - updateAdminByID : menggunakan method PUT, method ini akan mengupdate data admin berdasarkan ID
 - login : menggunakan method POST, method ini merupakan method login untuk admin
+
 Request :
 
-- Method : POST
-- Endpoint : admin/login
-- Header :
+Method : POST
 
-- Body :
+Endpoint : admin/login
+
+Header :
+
+Body :
 
 ```javascript
    {
@@ -134,7 +360,7 @@ Request :
     }
 ```
 
-- Response :
+Response :
 
 ```javascript
     {

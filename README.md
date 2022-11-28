@@ -35,12 +35,111 @@
 - updatePengajarByID : menggunakan method PUT, method ini akan mengupdate data pengajar berdasarkan ID yg di-request oleh user
 
 > /admin : endpoint ini memiliki beberapa method, antara lain :
+| Atrributes    | Tipe Data 	  | Deksripsi                    |
+| ------------- | ------------- | ---------------------------- |
+| name      	  | String      	| nama akun admin              |
+| email 	      | String      	| untuk autentifikasi admin    |
+| password      | String    	  | untuk autentifikasi admin    |
+
 - getAllAdmin : menggunakan method GET, method ini akan mendapatkan data semua admin
+Request :
+
+- Method : GET
+- Endpoint : admin
+- Header : authAdmin
+  - Accept : application/json
+- Response :
+
+```javascript
+  {
+  "message": "succes get data",
+  "data": [
+    {
+      "_id": "String",
+      "name": "String",
+      "email": "String",
+      "password": "String",
+      "__v": 0
+    }
+  ]
+}
+```
 - getAdminByID : menggunakan method GET, method ini akan mendapatkan data admin berdasarkan ID
+Request :
+
+- Method : GET
+- Endpoint : admin/:id
+- Header : authAdmin
+  - Accept : application/json
+- Response :
+
+```javascript
+  {
+  "message": "succes get data",
+  "data": [
+    {
+      "_id": "String",
+      "name": "String",
+      "email": "String",
+      "password": "String",
+      "__v": 0
+    }
+  ]
+}
+```
+
 - addAdmin : menggunakan method POST, method ini akan menambahkan data admin
+Request :
+
+- Method : POST
+- Endpoint : admin/register
+- Header :
+
+- Body :
+
+```javascript
+   {
+    "name":"String",
+    "email":"String",
+    "password": "String"
+    }
+```
+
+- Response :
+
+```javascript
+    {
+       "message": "admin data created!!!"
+    }
+```
+
 - deleteAdminByID : menggunakan method DELETE, method ini akan menghapus data admin berdasarkan ID
 - updateAdminByID : menggunakan method PUT, method ini akan mengupdate data admin berdasarkan ID
 - login : menggunakan method POST, method ini merupakan method login untuk admin
+Request :
+
+- Method : POST
+- Endpoint : admin/login
+- Header :
+
+- Body :
+
+```javascript
+   {
+    "email":"String",
+    "password": "String"
+    }
+```
+
+- Response :
+
+```javascript
+    {
+     "message": "String",
+     "token": "String"
+    }
+```
+
 
 ## How to use
 

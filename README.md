@@ -142,7 +142,7 @@ Body :
     }
 ```
 
-     ** Response :
+Response :
 
 ```javascript
     {

@@ -39,6 +39,7 @@
 |tambahan         | String    	  | tambahan                     |
 
 - getAllPesanLes : menggunakan method GET, method ini akan mendapatkan semua data pesanan les yang telah dibuat
+
 Request :
 
 Method : GET
@@ -81,6 +82,7 @@ Response :
 ```
 
 - getPesanLesByID : menggunakan method GET, method ini akan mendapatkan data pesanan berdasarkan ID
+
 Request :
 
 Method : GET
@@ -123,6 +125,7 @@ Response :
 ```
 
 - addPesanLes : menggunakan method POST, method ini akan menambah pesanan les ke database
+
 Request :
 
 Method : POST
@@ -159,6 +162,7 @@ Response :
     }
 ```
 - deletePesanLesByID : menggunakan method DELETE, method ini akan menghapus pesanan lesberdasarkan ID
+
 Request :
 
 Method : DELETE
@@ -193,6 +197,7 @@ Response :
 ```
 
 - updatePesanLesByID : menggunakan method PUT, method ini akan mengupdate pesanan les berdasarkan ID
+
 Request :
 
 Method : PUT
@@ -254,6 +259,7 @@ Response :
 
 
 - getAllAdmin : menggunakan method GET, method ini akan mendapatkan data semua admin
+
 Request :
 
 Method : GET
@@ -279,6 +285,7 @@ Response :
 }
 ```
 - getAdminByID : menggunakan method GET, method ini akan mendapatkan data admin berdasarkan ID
+
 Request :
 
 Method : GET
@@ -305,6 +312,7 @@ Response :
 ```
 
 - addAdmin : menggunakan method POST, method ini akan menambahkan data admin
+
 Request :
 
 Method : POST
@@ -334,6 +342,7 @@ Response :
 - deleteAdminByID : menggunakan method DELETE, method ini akan menghapus data admin berdasarkan ID
 - updateAdminByID : menggunakan method PUT, method ini akan mengupdate data admin berdasarkan ID
 - login : menggunakan method POST, method ini merupakan method login untuk admin
+
 Request :
 
 Method : POST

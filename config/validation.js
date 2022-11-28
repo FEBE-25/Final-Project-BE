@@ -24,7 +24,7 @@ const loginValidation = (data) => {
 };
 const pesanLesValidation = (data) => {
   const schema = Joi.object({
-    teacherId: Joi.string().required(),
+    teacherId: Joi.string(),
     userId: Joi.string().required(),
     biaya: Joi.string().required(),
     jenjangMateri: Joi.string().required(),

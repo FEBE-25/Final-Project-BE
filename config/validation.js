@@ -5,6 +5,10 @@ const registerValidation = (data) => {
     name: Joi.string().required(),
     email: Joi.string().email().required(),
     password: Joi.string().min(6).required(),
+    nohp: Joi.number().required(),
+    jenjangpendidikan: Joi.string().required(),
+    alamat: Joi.string().required(),
+    asalsekolah: Joi.string().required(),
   });
 
   return schema.validate(data);

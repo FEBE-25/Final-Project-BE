@@ -7,7 +7,11 @@ const userSchema = new Schema({
       type: String,
       required: true
     },
-    password: String
+    password: String,
+    nohp: Number,
+    jenjangpendidikan: String,
+    alamat: String,
+    asalskolah: String,
     
   })
 

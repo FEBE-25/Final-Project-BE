@@ -11,12 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "joi": "^17.7.0",
     "jsonwebtoken": "^8.5.1",
     "listen": "^1.0.1",
-    "mongoose": "^6.7.2",
+    "mongoose": "^6.7.3",
     "mongose": "^0.0.2-security"
   },
   "devDependencies": {
@@ -30,5 +31,5 @@
     "url": "https://github.com/vivatiara/BE-25-GroupProject2/issues"
   },
   "homepage": "https://github.com/vivatiara/BE-25-GroupProject2#readme",
-  "description": ""
+  "description": "> Ajar.in adalah aplikasi berbasis website yang membantu user dalam mencari mentor / guru untuk les"
 }

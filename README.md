@@ -35,11 +35,14 @@
 - updatePengajarByID : menggunakan method PUT, method ini akan mengupdate data pengajar berdasarkan ID yg di-request oleh user
 
 > /admin : endpoint ini memiliki beberapa method, antara lain :
+
+
 | Atrributes    | Tipe Data 	  | Deksripsi                    |
 | ------------- | ------------- | ---------------------------- |
 | name      	  | String      	| nama akun admin              |
 | email 	      | String      	| untuk autentifikasi admin    |
 | password      | String    	  | untuk autentifikasi admin    |
+
 
 - getAllAdmin : menggunakan method GET, method ini akan mendapatkan data semua admin
 Request :

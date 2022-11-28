@@ -70,11 +70,10 @@ Request :
 - getAdminByID : menggunakan method GET, method ini akan mendapatkan data admin berdasarkan ID
 Request :
 
-     ** Method : GET
-     ** Endpoint : admin/:id
-     ** Header : authAdmin
-       ** Accept : application/json
-     ** Response :
+Method : GET
+Endpoint : admin/:id
+Header : authAdmin
+Response :
 
 ```javascript
   {

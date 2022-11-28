@@ -56,7 +56,10 @@ module.exports = {
         if (!doc) {
           return res.status(404).end();
         }
-        return res.status(200).json(doc);
+        return res.status(200).json({
+          message : "Pesanan telah dihapus",
+          doc
+        });
       })
       .catch((err) => next(err));
   },
@@ -71,7 +74,7 @@ module.exports = {
         }
         return res.status(200).json({
           doc,
-          message: "pengajar telah ditambah",
+          message: "pesanan telah diedit",
         });
       })
       .catch((err) => next(err));

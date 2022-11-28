@@ -47,11 +47,13 @@
 - getAllAdmin : menggunakan method GET, method ini akan mendapatkan data semua admin
 Request :
 
-     Method : GET
-     Endpoint : admin
-     Header : authAdmin
-       Accept : application/json
-     Response :
+Method : GET
+
+Endpoint : admin
+
+Header : authAdmin
+
+Response :
 
 ```javascript
   {
@@ -71,8 +73,11 @@ Request :
 Request :
 
 Method : GET
+
 Endpoint : admin/:id
+
 Header : authAdmin
+
 Response :
 
 ```javascript
@@ -93,11 +98,13 @@ Response :
 - addAdmin : menggunakan method POST, method ini akan menambahkan data admin
 Request :
 
-     ** Method : POST
-     ** Endpoint : admin/register
-     ** Header :
+Method : POST
 
-     ** Body :
+Endpoint : admin/register
+
+Header :
+
+Body :
 
 ```javascript
    {
@@ -120,11 +127,13 @@ Request :
 - login : menggunakan method POST, method ini merupakan method login untuk admin
 Request :
 
-     ** Method : POST
-     ** Endpoint : admin/login
-     ** Header :
+Method : POST
 
-     ** Body :
+Endpoint : admin/login
+
+Header :
+
+Body :
 
 ```javascript
    {

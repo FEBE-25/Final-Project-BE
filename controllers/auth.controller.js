@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
       const verifyUser = (req,res,next) =>{
         const loginKEY = "anotherone"
 
-        const token = req.header('authAdmin')
+        const token = req.header('authUser')
         if(!token) return res.status(400).json({
             status: res.statusCode,
             message: 'Access Denied !'

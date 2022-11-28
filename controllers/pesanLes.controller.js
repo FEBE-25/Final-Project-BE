@@ -57,7 +57,7 @@ module.exports = {
           return res.status(404).end();
         }
         return res.status(200).json({
-          message : "Pesanan telah dihapus",
+          message : "Pesanan telah dihapus ",
           doc
         });
       })

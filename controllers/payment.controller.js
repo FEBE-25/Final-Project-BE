@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
     addPayment: (req, res) => {
-       const {nama, barang, harga} = req.body
+       const {namaPesanan,namaUser,namaPengajar, tanggal, jamMulai, durasi, harga} = req.body
 
        let snap = new midtransClient.Snap({
         // Set to true if you want Production Environment (accept real transaction).
@@ -15,16 +15,21 @@ module.exports = {
     let randomId = uuidv4();
        let parameter = {
         "transaction_details": {
-            "order_id": "YOUR-ORDERID-"+ randomId,
+            "order_id": "BilLes-"+ randomId,
             "gross_amount": harga
         },
         "credit_card":{
             "secure" : true
         },
         "customer_details": {
-            "first_name": nama,
-            "barang": barang,
+            "namaPesanan": namaPesanan,
             "harga": harga,
+            "pengajar":namaPengajar,
+            "user": namaUser,
+            "tanggal": tanggal,
+            "jamMulai":jamMulai,
+            "durasi":durasi,
+            
         }
     };
     

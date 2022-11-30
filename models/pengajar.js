@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const pengajarSchema = new Schema({
+  email: String,
+  noHp: String,
   nama: {
     type: String,
     required: true,
@@ -14,7 +16,7 @@ const pengajarSchema = new Schema({
     type: String,
     required: true,
   },
-  edukasi: {
+  alamat: {
     type: String,
     required: true,
   },
@@ -25,6 +27,7 @@ const pengajarSchema = new Schema({
   avatar: String,
   pengalaman: String,
   ulasan: String,
+  overall:String,
 });
 
 const Pengajar = mongoose.model("Pengajar", pengajarSchema);

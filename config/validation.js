@@ -42,12 +42,19 @@ const pesanLesValidation = (data) => {
 };
 const pengajarValidation = (data) => {
   const schema = Joi.object({
+    email:Joi.string(),
+    noHp: Joi.string(),
     nama: Joi.string().required(),
     pendidikan: Joi.string().required(),
     deskripsi: Joi.string().required(),
-    edukasi: Joi.string().required(),
+    alamat: Joi.string().required(),
     bidangAjar: Joi.string().required(),
+    avatar: Joi.string(),
+    pengalaman: Joi.string(),
+    ulasan: Joi.string(),
+    overall: Joi.string(),
   });
+  return schema.validate(data);
 };
 
 module.exports.pesanLesValidation = pesanLesValidation;

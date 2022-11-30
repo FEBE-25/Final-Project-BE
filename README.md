@@ -369,6 +369,83 @@ Response :
     }
 ```
 
+> user/register : endpoint ini memiliki beberapa method, antara lain :
+
+| Atrributes        | Tipe Data 	  | Deksripsi                    |
+| ----------------- | ------------- | ---------------------------- |
+| name      	      | String      	| nama akun user               |
+| email 	          | String      	| untuk autentifikasi user     |
+| password          | String    	  | untuk autentifikasi user     |
+| nohp              | Number        | untuk autentifikasi user     |
+| Jenjangpendidikan | String        | untuk autentifikasi user     |
+| alamat            | String        | untuk autentifikasi user     |
+| asal sekolah      | String        | untuk autentifikasi user     |
+
+Request :
+
+Method : POST
+
+Endpoint : user/register
+
+Header :
+
+Body :
+
+```javascript
+   {
+    "name": "String",
+    "email":"String",
+    "password": "String",
+    "nohp": "Number",
+    "jenjangpendidikan": "String",
+    "alamat": "String",
+    "asalsekolah": "String"
+    }
+```
+
+Response :
+
+```javascript
+{
+  "message": "data has been created!!"
+}
+```
+
+> user/login : endpoint ini memiliki beberapa method, antara lain :
+
+| Atrributes        | Tipe Data 	  | Deksripsi                    |
+| ----------------- | ------------- | ---------------------------- |
+| email 	          | String      	| untuk autentifikasi user     |
+| password          | String    	  | untuk autentifikasi user     |
+
+
+Request :
+
+Method : POST
+
+Endpoint : user/login
+
+Header :
+
+Body :
+
+```javascript
+   {
+    "email":"String",
+    "password": "String"
+    }
+```
+
+Response :
+
+```javascript
+{
+  "message": "Login Succesful",
+  "token": ""
+}
+```
+
+
 
 ## How to use
 

@@ -16,7 +16,7 @@ router.get("/",verifyUser, getAllPesanLes);
 router.get("/:id",verifyUser, getPesanLesByID);
 router.post("/",verifyUser, addPesanLes);
 router.delete("/:id",verifyAdmin, deletePesanLesByID);
-router.put("/:id",verifyUser, updatePesanLesByID);
+router.put("/:id", updatePesanLesByID);
 router.delete("/all/:id",verifyAdmin,deleteAllPesanLes)
 
 module.exports = router;

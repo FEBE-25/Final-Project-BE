@@ -1,4 +1,5 @@
 const Joi = require("joi");
+const { modelNames } = require("mongoose");
 
 const registerValidation = (data) => {
   const schema = Joi.object({
@@ -57,7 +58,21 @@ const pengajarValidation = (data) => {
   return schema.validate(data);
 };
 
+const paymentValidation = (data) => {
+  const schema = Joi.object({
+    namapesanan:Joi.string(),
+    namaUser: Joi.string(),
+    namaPengajar: Joi.string().required(),
+    tanggal: Joi.string().required(),
+    jamMulai: Joi.string().required(),
+    durasi: Joi.string().required(),
+    harga: Joi.string().required(),
+  });
+  return schema.validate(data);
+};
+
 module.exports.pesanLesValidation = pesanLesValidation;
 module.exports.registerValidation = registerValidation;
 module.exports.loginValidation = loginValidation;
 module.exports.pengajarValidation = pengajarValidation;
+module.exports.paymentValidation = paymentValidation;

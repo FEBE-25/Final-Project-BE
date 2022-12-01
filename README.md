@@ -11,7 +11,7 @@
 
 ## API Spec
 
-### Endpoints (list-method-(req, res(success/gagal) format json))
+### Endpoints
 > /user : endpoint ini memiliki beberapa method, antara lain :
 - getAllUser : menggunakan method GET, method ini akan mendapatkan semua data user
 - getUserByID : menggunakan method GET, method ini akan mendapatkan data user berdasarkan ID
@@ -40,7 +40,7 @@
 
 - getAllPesanLes : menggunakan method GET, method ini akan mendapatkan semua data pesanan les yang telah dibuat
 
-Request :
+**Request :**
 
 Method : GET
 
@@ -48,7 +48,7 @@ Endpoint : pesanLes
 
 Header : authUser
 
-Response :
+**Response :**
 
 ```javascript
   {
@@ -83,7 +83,7 @@ Response :
 
 - getPesanLesByID : menggunakan method GET, method ini akan mendapatkan data pesanan berdasarkan ID
 
-Request :
+**Request :**
 
 Method : GET
 
@@ -91,7 +91,7 @@ Endpoint : pesanLes/:id
 
 Header : authUser
 
-Response :
+**Response :**
 
 ```javascript
   {
@@ -126,7 +126,7 @@ Response :
 
 - addPesanLes : menggunakan method POST, method ini akan menambah pesanan les ke database
 
-Request :
+**Request :**
 
 Method : POST
 
@@ -154,7 +154,7 @@ Body :
   }
 ```
 
-Response :
+**Response :**
 
 ```javascript
     {
@@ -163,7 +163,7 @@ Response :
 ```
 - deletePesanLesByID : menggunakan method DELETE, method ini akan menghapus pesanan lesberdasarkan ID
 
-Request :
+**Request :**
 
 Method : DELETE
 
@@ -171,7 +171,7 @@ Endpoint : pesanLes/:id
 
 Header : authAdmin
 
-Response :
+**Response :**
 
 ```javascript
  {
@@ -198,7 +198,7 @@ Response :
 
 - updatePesanLesByID : menggunakan method PUT, method ini akan mengupdate pesanan les berdasarkan ID
 
-Request :
+**Request :**
 
 Method : PUT
 
@@ -226,7 +226,7 @@ Body :
   }
 ```
 
-Response :
+**Response :**
 
 ```javascript
     {
@@ -241,11 +241,31 @@ Response :
 }
 ```
 
-> /pengajar : endpoint ini memiliki beberapa method, antara lain :
+> /pengajar : endpoint ini memiliki Scema dan beberapa method, antara lain :
+
+| Atrributes      | Tipe Data 	    | Deksripsi                    |
+| --------------- | --------------- | ---------------------------- |
+| _id            	| String      	  | id pengajar                  |
+| email           | String       	  | email pengajar               |
+| noHp            | String     	    | no hp prngajar               |
+| nama            | String     	    | nama pengajar                |
+| foto            | String     	    | link ke foto pengajar        |
+| edukasi         | Array of Object | kampus dan jurusan pengajar  |
+| alamat          | Object       	  | kabupaten / kota & provinsi  |
+| bidangAjar      | Array       	  | Subjek yg diajarkan          |
+| deskripsi       | String       	  | deskripsi profil pengajar    |
+| pengalaman      | Array of Object | pengalaman pengajar          |
+| review          | Array of Object | review terhadap pengajar     |
+| overall         | Object       	  | rekap bintang review         |
+
 - getAllPengajar : menggunakan method GET, method ini akan mendapatkan data semua pengajar dalam database
+
 - getPengajarByID : menggunakan method GET, method ini akan mendapatkan data pengajar berdasarkan ID yg di-request oleh user
+
 - addPengajar : menggunakan method POST, method ini akan menambahkan data baru ke dalam collection
+
 - deletePengajarByID : menggunakan method DELETE, method ini akan menghapus data pengajar berdasarkan ID yang di-request oleh user
+
 - updatePengajarByID : menggunakan method PUT, method ini akan mengupdate data pengajar berdasarkan ID yg di-request oleh user
 
 > /admin : endpoint ini memiliki beberapa method, antara lain :
@@ -260,7 +280,7 @@ Response :
 
 - getAllAdmin : menggunakan method GET, method ini akan mendapatkan data semua admin
 
-Request :
+**Request :**
 
 Method : GET
 
@@ -268,7 +288,7 @@ Endpoint : admin
 
 Header : authAdmin
 
-Response :
+**Response :**
 
 ```javascript
   {
@@ -286,7 +306,7 @@ Response :
 ```
 - getAdminByID : menggunakan method GET, method ini akan mendapatkan data admin berdasarkan ID
 
-Request :
+**Request :**
 
 Method : GET
 
@@ -294,7 +314,7 @@ Endpoint : admin/:id
 
 Header : authAdmin
 
-Response :
+**Response :**
 
 ```javascript
   {
@@ -313,7 +333,7 @@ Response :
 
 - addAdmin : menggunakan method POST, method ini akan menambahkan data admin
 
-Request :
+**Request :**
 
 Method : POST
 
@@ -331,7 +351,7 @@ Body :
     }
 ```
 
-Response :
+**Response :**
 
 ```javascript
     {
@@ -343,7 +363,7 @@ Response :
 - updateAdminByID : menggunakan method PUT, method ini akan mengupdate data admin berdasarkan ID
 - login : menggunakan method POST, method ini merupakan method login untuk admin
 
-Request :
+**Request :**
 
 Method : POST
 
@@ -360,7 +380,7 @@ Body :
     }
 ```
 
-Response :
+**Response :**
 
 ```javascript
     {
@@ -381,7 +401,7 @@ Response :
 | alamat            | String        | untuk autentifikasi user     |
 | asal sekolah      | String        | untuk autentifikasi user     |
 
-Request :
+**Request :**
 
 Method : POST
 
@@ -403,7 +423,7 @@ Body :
     }
 ```
 
-Response :
+**Response :**
 
 ```javascript
 {
@@ -419,7 +439,7 @@ Response :
 | password          | String    	  | untuk autentifikasi user     |
 
 
-Request :
+**Request :**
 
 Method : POST
 
@@ -436,7 +456,7 @@ Body :
     }
 ```
 
-Response :
+**Response :**
 
 ```javascript
 {
@@ -465,5 +485,3 @@ node app
 
 ## Lampiran
 - Business Requirements Document : https://whimsical.com/business-requirements-document-4Vx6CdS1nqEZF7ERx4weRY
-  
-- 

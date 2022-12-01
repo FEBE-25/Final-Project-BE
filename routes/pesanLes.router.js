@@ -12,8 +12,8 @@ const {
   deleteAllPesanLes,
 } = require("../controllers/pesanLes.controller");
 
-router.get("/",verifyUser, getAllPesanLes);
-router.get("/:id",verifyUser, getPesanLesByID);
+router.get("/", getAllPesanLes);
+router.get("/:id", getPesanLesByID);
 router.post("/",verifyUser, addPesanLes);
 router.delete("/:id",verifyAdmin, deletePesanLesByID);
 router.put("/:id", updatePesanLesByID);
